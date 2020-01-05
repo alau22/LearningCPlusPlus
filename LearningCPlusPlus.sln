@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "019-Pointers", "019-Pointer
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "020-Exceptions", "020-Exceptions\020-Exceptions.vcxproj", "{36F5AFAB-2876-4F45-9EAD-B21DBA67F4D5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "021-POO", "021-POO\021-POO.vcxproj", "{7BADC1DD-BC32-4372-9621-730B95375BB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +213,14 @@ Global
 		{36F5AFAB-2876-4F45-9EAD-B21DBA67F4D5}.Release|x64.Build.0 = Release|x64
 		{36F5AFAB-2876-4F45-9EAD-B21DBA67F4D5}.Release|x86.ActiveCfg = Release|Win32
 		{36F5AFAB-2876-4F45-9EAD-B21DBA67F4D5}.Release|x86.Build.0 = Release|Win32
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Debug|x64.ActiveCfg = Debug|x64
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Debug|x64.Build.0 = Debug|x64
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Debug|x86.ActiveCfg = Debug|Win32
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Debug|x86.Build.0 = Debug|Win32
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Release|x64.ActiveCfg = Release|x64
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Release|x64.Build.0 = Release|x64
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Release|x86.ActiveCfg = Release|Win32
+		{7BADC1DD-BC32-4372-9621-730B95375BB0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
