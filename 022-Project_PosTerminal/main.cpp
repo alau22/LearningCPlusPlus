@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "utils.h"
+#include "product.h"
 
 enum Commands
 {
@@ -16,6 +16,14 @@ enum Commands
 
 int main()
 {
+  //Product* item = new Product("chocolat Lindt");
+  //std::cout << item->getName() << std::endl;
+  //std::cout << item->getIsListed() << std::endl;
+  //std::cout << item->getPrice() << std::endl;
+  //std::cout << item->getQuantity() << std::endl;
+  //std::cout << item->getUPC() << std::endl;
+  //delete item;
+
   std::string operation;
   bool exit = false;
   char c;
