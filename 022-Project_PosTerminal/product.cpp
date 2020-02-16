@@ -1,76 +1,83 @@
 #include "product.h"
 
-Product::Product(const std::string p_name)
+using namespace std;
+
+Product::Product()
 {
-  setIsListed(false);
-  setName(p_name);
-  setPrice(0);
-  setQuantity(0);
-  setUPC(0);
+  m_active = false;
+  m_category = Category::None;
+  m_price = 0;
+  m_quantity = 0;
+  m_upc = new UPC();
+}
+Product::~Product()
+{
+  delete m_upc;
 }
 
-bool Product::getIsListed() const
-{
-  return m_isListed;
-}
-
-std::string Product::getName() const
-{
-  return m_name;
-}
-
-double Product::getPrice() const
-{
-  return m_price;
-}
-
-int Product::getQuantity() const
-{
-  return m_quantity;
-}
-
-unsigned long long int Product::getUPC() const
+UPC* Product::getUPC()
 {
   return m_upc;
 }
 
-void Product::setIsListed(const bool p_isListed)
+std::string Product::getName()
 {
-  m_isListed = p_isListed;
+  return m_name;
 }
 
-void Product::setName(const std::string p_name)
+int Product::getQuantity()
 {
-  if (p_name.empty())
+  return m_quantity;
+}
+
+double Product::getPrice()
+{
+  return m_price;
+}
+
+bool Product::getActive()
+{
+  return m_active;
+}
+
+Category Product::getCategory()
+{
+  return m_category;
+}
+
+void Product::setName(std::string p_name)
+{
+  if (p_name.empty() || p_name.length() > 100)
   {
-    throw "name is required";
+    throw string("Invalid name");
   }
   m_name = p_name;
 }
 
-void Product::setPrice(const double p_price)
+void Product::setQuantity(int p_quantity)
 {
-  if (p_price < 0)
+  if (p_quantity<0)
   {
-    throw "price must be positive";
-  }
-  m_price = p_price;
-}
-
-void Product::setQuantity(const int p_quantity)
-{
-  if (p_quantity < 0)
-  {
-    throw "quantity must be positive";
+    throw string("Invalid quantity");
   }
   m_quantity = p_quantity;
 }
 
-void Product::setUPC(const unsigned long long int p_upc)
+void Product::setPrice(double p_price)
 {
-  if (p_upc > 999999999999)
+  if (p_price <= 0)
   {
-    throw "upc must be between 0 and 999999999999";
+    throw string("Invalid price");
   }
-  m_upc = p_upc;
+  m_price = p_price;
+}
+
+void Product::setActive(bool p_active)
+{
+  m_active = p_active;
+}
+
+void Product::setCategory(Category p_category)
+{
+  m_category = p_category;
 }

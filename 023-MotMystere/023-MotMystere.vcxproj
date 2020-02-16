@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{51F26E3D-D4CC-4012-A54F-F98860C9A132}</ProjectGuid>
-    <RootNamespace>My022ProjectPosTerminal</RootNamespace>
+    <ProjectGuid>{505EA9B4-1CDA-4317-84DC-20C9D156BA2D}</ProjectGuid>
+    <RootNamespace>My023MotMystere</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,15 +138,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="create.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="product.cpp" />
-    <ClCompile Include="UPC.cpp" />
+    <ClCompile Include="jeu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="create.h" />
-    <ClInclude Include="product.h" />
-    <ClInclude Include="UPC.h" />
+    <ClInclude Include="jeu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="mot.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

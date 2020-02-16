@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
+#include <map>
+#include "create.h"
 #include "product.h"
+
+using namespace std;
 
 enum Commands
 {
@@ -16,65 +20,59 @@ enum Commands
 
 int main()
 {
-  //Product* item = new Product("chocolat Lindt");
-  //std::cout << item->getName() << std::endl;
-  //std::cout << item->getIsListed() << std::endl;
-  //std::cout << item->getPrice() << std::endl;
-  //std::cout << item->getQuantity() << std::endl;
-  //std::cout << item->getUPC() << std::endl;
-  //delete item;
-
-  std::string operation;
+  string operation;
   bool exit = false;
   char c;
+  map<long long, Product> products;
   do
   {
-    std::cout << "[O] Load" << std::endl;
-    std::cout << "[L] List" << std::endl;
-    std::cout << "[F] Find" << std::endl;
-    std::cout << "[C] Create" << std::endl;
-    std::cout << "[U] Update" << std::endl;
-    std::cout << "[D] Delete" << std::endl;
-    std::cout << "[S] Save" << std::endl;
-    std::cout << "[X] Exit" << std::endl;
-    std::getline(std::cin, operation); // comme cin mais sécuritaire pour les espaces
+    cout << "[O] Load" << endl;
+    cout << "[L] List" << endl;
+    cout << "[F] Find" << endl;
+    cout << "[C] Create" << endl;
+    cout << "[U] Update" << endl;
+    cout << "[D] Delete" << endl;
+    cout << "[S] Save" << endl;
+    cout << "[X] Exit" << endl;
+    getline(cin, operation); // comme cin mais sécuritaire pour les espaces
     if (operation.length() != 1)
     {
-      std::cout << "Invalid operation: " << operation << std::endl;
+      cout << "Invalid operation: " << operation << endl;
       continue;
     }
     c = toupper(operation[0]);
     switch (c)
     {
     case Commands::Create:
-      std::cout << "not implemented" << std::endl;
+      create(products);
       break;
     case Commands::Delete:
-      std::cout << "not implemented" << std::endl;
+      cout << "not implemented" << endl;
       break;
     case Commands::Exit:
       exit = true;
       break;
     case Commands::Find:
-      std::cout << "not implemented" << std::endl;
+      cout << "not implemented" << endl;
       break;
     case Commands::List:
-      std::cout << "not implemented" << std::endl;
+      cout << "not implemented" << endl;
       break;
     case Commands::Load:
-      std::cout << "not implemented" << std::endl;
+      cout << "not implemented" << endl;
       break;
     case Commands::Save:
-      std::cout << "not implemented" << std::endl;
+      cout << "not implemented" << endl;
       break;
     case Commands::Update:
-      std::cout << "not implemented" << std::endl;
+      cout << "not implemented" << endl;
       break;
     default:
-      std::cout << "Operation not existing: " << c << std::endl;
-        break;
+      cout << "Operation not existing: " << c << endl;
+      break;
     }
-    std::cout << std::endl;
+    cout << endl;
   } while (!exit);
+
   return 0;
 }
